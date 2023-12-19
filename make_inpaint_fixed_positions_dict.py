@@ -12,7 +12,6 @@ import json
 def main(args):
 
     # get data from .trb file
-    #trb_basename = args.trb_file.split(".")[0]
     trb_data = np.load(args.trb_file, allow_pickle=True)
     unfixed_chain = list(set([x[0] for x in trb_data['con_hal_pdb_idx']]))
     print(unfixed_chain)
