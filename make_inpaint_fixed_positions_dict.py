@@ -47,7 +47,6 @@ if __name__ == "__main__":
     parser.add_argument("--parse_chains", type=str, required=True, help="Path to parsed multiple chains .jsonl file")
     parser.add_argument("--trb_file", type=str, required=True, help="Path to RFdiffusion .trb file")
     parser.add_argument("--output_path", type=str, required=True, help="Path to the output dictionary .jsonl file")
-    parser.add_argument("--verbose", action="store_true", default=True)
     args = parser.parse_args()
 
     main(args)
