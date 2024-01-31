@@ -14,7 +14,7 @@ https://github.com/sokrypton/ColabFold
 https://github.com/YoshitakaMo/localcolabfold
 
 ### Special remark
-make_inpaint_fixed_positions_dict.py must be in ProteinMPNN/helper_scripts/
+make_inpaint_fixed_positions_dict.py must be in /Path/to/ProteinMPNN/helper_scripts/
 
 ### contact 
 danton dot ivanochko at sickkids dot ca
