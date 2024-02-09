@@ -9,7 +9,7 @@ echo ""
 echo "  -f   Provide an input PDB file ( e.g. ./file.pdb or /path/to/file.pdb )"
 echo "  -s   Provide the length of the shortest sequence to inpaint into your model"
 echo "  -l   Provide the length of the longest sequence to inpaint into your model"
-echo "  -c   Provide a contig_map for inpainting. Use a ! symbol to signify the inpainted region. (e.g. [P1-9/!/M1-99/0 H1-276/0] )"
+echo "  -c   Provide a contig_map for inpainting. Use an @ symbol to signify the inpainted region. (e.g. [P1-9/@/M1-99/0 H1-276/0] )"
 echo ""
 }
 
@@ -47,7 +47,7 @@ echo -e $"\n\nInpainting ${input_pdb_file} at ${input_contig_map} with sequences
 # COMMON VARIABLES
 # get input pdb basename for labeling output directories and files
 pdb_file_basename=$(basename $input_pdb_file .pdb)
-IFS='!' read -r -a input_contig_map_split <<< "${input_contig_map}"
+IFS='@' read -r -a input_contig_map_split <<< "${input_contig_map}"
 
 
 # Generate backbone conformations --> RFdiffusion
