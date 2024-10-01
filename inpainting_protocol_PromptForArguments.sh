@@ -171,7 +171,7 @@ done
 for output_csv_file in ./ProteinMPNN_output_${pdb_file_basename}/*_output.csv;
 do
     echo "Sorting ${output_csv_file} csv file by score.";
-    sort -t, -k4,4 -n ${output_csv_file} -o ${output_csv_file}; # sort on the 4th column (score)
+    sort -t, -k4,4 -nr ${output_csv_file} -o ${output_csv_file}; # sort on the 4th column (score)
     sed -i '1s/^/input,T,sample,score,global_score,seq_recovery,seq,\n/' ${output_csv_file} # add column names and write to csv
 done
 
